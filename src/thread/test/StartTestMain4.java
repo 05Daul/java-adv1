@@ -5,11 +5,11 @@ import static thread.util.MyLogger.log;
 public class StartTestMain4 {
 
   public static void main(String[] args) {
-    PrintWork a = new PrintWork("A",1000);
+    PrintWork a = new PrintWork("A",2000);
     PrintWork b = new PrintWork("B",500);
 
     Thread t1 = new Thread(a,"Thread-A");
-    Thread t2 = new Thread(a,"Thread-B");
+    Thread t2 = new Thread(b,"Thread-B");
     t1.start();
     t2.start();
   }
