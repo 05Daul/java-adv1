@@ -3,7 +3,7 @@ package thread.control.interrupt;
 import static thread.util.MyLogger.log;
 import static thread.util.ThreadUtils.sleep;
 
-public class ThreadStopMain3 {
+public class ThreadStopMain4 {
 
   public static void main(String[] args) {
     MyTask task = new MyTask();
@@ -22,7 +22,7 @@ public class ThreadStopMain3 {
     @Override
     public void run() {
       while (!Thread.interrupted()) {
-        /// 인터럽트 상태를 체크, 변경은 x
+        /// 인터럽트 상태를 체크, 변경은 O
         log("작업 중");
 
       }
