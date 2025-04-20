@@ -4,7 +4,7 @@ import static thread.util.MyLogger.log;
 import static thread.util.ThreadUtils.sleep;
 
 public class JoinMain1 {
-
+///  메인 스레드가 계산결과나 나오기 전에 계산을 조회하는 문제가 발생
   public static void main(String[] args) {
     log("start");
     SumTask task1 = new SumTask(1, 50);
@@ -18,8 +18,8 @@ public class JoinMain1 {
 
     log("end");
 
-    int sunAll = task1.result+task2.result;
-    System.out.println("sunAll = " + sunAll);
+    int sumAll = task1.result+task2.result;
+    System.out.println("sumAll = " + sumAll);
 
   }
 
@@ -38,7 +38,7 @@ public class JoinMain1 {
     @Override
     public void run() {
       log("작업 시작");
-      sleep(1);
+      sleep(1000);
       int sum = 0;
       for (int i = startVal; i <= endVal; i++) {
         sum += i;

@@ -14,7 +14,6 @@ public class HelloThreadMain1 {
     System.out.println(Thread.currentThread().getName() + ": , start 호출 전");
     helloThread.start();
     /// HelloThread helloThread = new HelloThread() 객체를 통해 thread를 통해 별도의 스레드를 실행
-
     System.out.println(Thread.currentThread().getName() + ": , start 호출 후");
     System.out.println(Thread.currentThread().getName() + ": , main 스레드 종료");
     /// 호출결과는 달라질 수 있음. 왜? 스케줄링의 타이밍에 따라 달라질 수 있음.
